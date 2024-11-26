@@ -9,9 +9,7 @@ services:
     ports:
       - 8000:8000
     depends_on:
-      db:
-        condition: service_healthy
-        restart: true
+      - db
     environment:
       DJANGO_DB_HOST: db
       DJANGO_DB_NAME: app
